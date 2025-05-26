@@ -1,0 +1,60 @@
+{
+  "name": "easygit-desktop",
+  "version": "1.0.0",
+  "description": "EasyGit - A user-friendly tool for GitHub version control",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest",
+    "package": "electron-builder build --win --publish never"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "version-control",
+    "electron",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.4.5",
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12",
+    "keytar": "^7.9.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "jest": "^29.7.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "build": {
+    "appId": "com.easygit.desktop",
+    "productName": "EasyGit",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}
